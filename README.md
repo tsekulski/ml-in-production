@@ -1,6 +1,4 @@
-# ml-in-production
-
-### Preparing Machine Learning Models for Real-Time Scoring with Sklearn Pipelines and Flask
+## Preparing Machine Learning Models for Real-Time Scoring with Sklearn Pipelines and Flask
 
 The notebook available in the `/notebooks` directory gives an overview of the following:
 * Typical sequence of data cleaning, feature engineering, model training steps in a machine learning project
