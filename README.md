@@ -1,12 +1,13 @@
 # ml-in-production
-# Preparing machine learning models for real-time scoring in production environment with sklearn pipelines and Flask
 
-## The notebook available in the `/notebooks` directory gives an overview of the following:
-### --> Typical sequence of data cleaning, feature engineering, model training steps in a machine learning project
-### --> The challenge of trying to reproduce these steps in real-time in the live scoring environment
-### --> Standard sklearn pipeline: how can it help us address this challenge - but only partly
-### --> Customizing sklearn pipeline to solve our challenge in an e2e fashion
-### --> Using Flask to serve a ML model as a REST API
+### Preparing Machine Learning Models for Real-Time Scoring with Sklearn Pipelines and Flask
+
+The notebook available in the `/notebooks` directory gives an overview of the following:
+* Typical sequence of data cleaning, feature engineering, model training steps in a machine learning project
+* The challenge of trying to reproduce these steps in real-time in a live scoring environment
+* Standard sklearn pipeline: how can it help us address this challenge - but only partly
+* Customizing sklearn pipeline to solve our challenge in an e2e fashion
+* Using Flask to serve a ML model as a REST API
 
 ## Getting Started
 
