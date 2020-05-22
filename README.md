@@ -1,16 +1,34 @@
 # ml-in-production
-Demo of preparing a machine learning model for production deployment with the use of:
-* sklearn pipeline (incl. custom transformers)
-* Flask
+# Preparing machine learning models for real-time scoring in production environment with sklearn pipelines and Flask
+
+## The notebook available in the `/notebooks` directory gives an overview of the following:
+### --> Typical sequence of data cleaning, feature engineering, model training steps in a machine learning project
+### --> The challenge of trying to reproduce these steps in real-time in the live scoring environment
+### --> Standard sklearn pipeline: how can it help us address this challenge - but only partly
+### --> Customizing sklearn pipeline to solve our challenge in an e2e fashion
+### --> Using Flask to serve a ML model as a REST API
 
 ## Getting Started
-
-<These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.>
 
 ### Prerequisites
 
 * Anaconda Python 3.x and Jupyter Notebooks
 * https://www.anaconda.com/distribution/
+
+The project has been tested with the following system and dependencies:
+```
+Operating system: Linux
+OS release: 4.15.0-101-generic
+Machine: x86_64
+Platform: Linux-4.15.0-101-generic-x86_64-with-debian-buster-sid
+Version: #102-Ubuntu SMP Mon May 11 10:07:26 UTC 2020
+
+Python version: 3.7.7 (default, May  7 2020, 21:25:33) 
+[GCC 7.3.0]
+Pandas version: 0.24.2
+Numpy version: 1.16.3
+Scikit-learn version: 0.20.3
+```
 
 ### Installing
 
@@ -33,7 +51,7 @@ source activate ml-in-production
 conda install --file requirements.txt
 ```
 
-8. Install packages from `src` directory:
+8. Install packages from `src` directory (inside the activated conda environment):
 ```
 pip install -e .
 ```
@@ -43,34 +61,9 @@ pip install -e .
 python -m ipykernel install --user --name ml-in-production --display-name "ml-in-production"
 ```
 
-10.
-
-(End with an example of getting some data out of the system or using it for a little demo)
-
-## Running the tests
-
-(Explain how to run the automated tests for this system)
-
-### Break down into end to end tests
-
-(Explain what these tests test and why)
-
+10. Change directory to project's directory and start jupyter server:
 ```
-Give an example
+jupyter notebook
 ```
 
-### And coding style tests
-
-(Explain what these tests test and why)
-
-```
-Give an example
-```
-
-## Deployment
-
-(Add additional notes about how to deploy this on a live system)
-
-## Built With
-
-* [Anaconda](https://www.anaconda.com) - Python distribution and Jupyter Notebooks
+11. Run the notebook available in the `/notebooks` directory
