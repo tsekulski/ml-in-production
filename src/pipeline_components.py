@@ -98,7 +98,7 @@ class DayOfWeekEncoder(BaseEstimator, TransformerMixin):
 
     def transform(self, features_df):
         transformed_df = features_df.copy()
-        transformed_df.loc[:, self.date_column] = transformed_df[self.date_column].map(lambda x: self.find_day_of_week(x))
+        transformed_df['Weekday'] = transformed_df[self.date_column].map(lambda x: self.find_day_of_week(x))
         transformed_df.drop([self.date_column], axis=1, inplace=True)
 
         return transformed_df
@@ -138,8 +138,8 @@ class DeviceEncoder(BaseEstimator, TransformerMixin):
 
 # Transformer for preceding and trailing whitespaces
 class WhitespaceRemover(BaseEstimator, TransformerMixin):
-    def __init__(self):
-        pass
+    # def __init__(self):
+    # no variables to be initialized
 
     def remove_whitespace(self, features_df):
         for col in features_df:
@@ -151,12 +151,9 @@ class WhitespaceRemover(BaseEstimator, TransformerMixin):
         return self
 
     def transform(self, features_df):
-        #print(features_df)
-        #print(features_df.dtypes)
         transformed_df = features_df.copy()
         transformed_df = self.remove_whitespace(transformed_df)
 
-        #print(transformed_df)
         return transformed_df
 
 
